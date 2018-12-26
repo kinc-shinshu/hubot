@@ -1,5 +1,13 @@
 # kinc-shinshu/hubot
 
+## Usage
+
+Add webhook triggered on Pull Request
+
+```
+https://kinc-shinshu-hubot.herokuapp.com/github/pull-review?channel_name=%23general
+```
+
 ## Ref
 
 - [HubotにGitHubのプルリクエストを自動でアサインさせる - Qiita](https://qiita.com/s-kiriki/items/4b38af4ebd05bad70eb7)

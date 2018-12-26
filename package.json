@@ -1,10 +1,11 @@
 {
-  "name": "kinc-shinshu/hubot",
+  "name": "hubot",
   "version": "0.0.0",
   "private": true,
   "author": "arsley <blue20will@gmail.com>",
   "description": "kinc-shinshu's hubot configs",
   "dependencies": {
+    "coffee-script": "^1.12.7",
     "githubot": "^1.0.1",
     "hubot": "^3.1.1",
     "hubot-diagnostics": "^1.0.0",
@@ -21,6 +22,7 @@
     "hubot-slack": "^4.6.0"
   },
   "engines": {
-    "node": "10.x"
+    "node": "10.13.0",
+    "npm": "6.5.0"
   }
 }
