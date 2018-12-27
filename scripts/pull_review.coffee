@@ -9,7 +9,7 @@ module.exports = (robot) ->
     github_api = 'https://api.github.com'
 
   # choose reviewer without pull request's author
-  chooseReviewer(pull_request_author) ->
+  chooseReviewer = (pull_request_author) ->
     candidates = users.filter(u -> u != pull_request_author)
     index = Math.floor Math.random() * candidates.length
     return candidates[index]
