@@ -44,6 +44,6 @@ module.exports = (robot) ->
         robot.messageRoom '#debug', "Auto assign error \##{pull_request.number}."
         return
 
-      body = "*\##{pull_request.number}* #{pull_request.title} のレビュワーは *#{reviewer}* になりました。"
+      body = "<#{pull_request.url}|*\##{pull_request.number} #{pull_request.title}*> のレビュワーは *#{reviewer}* になりました。"
       robot.messageRoom channel_name, body
       res.end()
