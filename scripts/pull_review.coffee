@@ -29,8 +29,8 @@ module.exports = (robot) ->
 
     # check already assigned?
     pull_request = data.pull_request
-    if pull_request.assignee
-      robot.messageRoom channel_name, "*\##{pull_request.number}* にはすでにアサイン済みです。"
+    if pull_request.requested_reviewers.length == 0
+      robot.messageRoom channel_name, "<#{pull_request.url}|*\##{pull_request.number} #{pull_request.title}*> にはすでにアサイン済みです。"
       return res.end()
 
     reviewer = chooseReviewer(pull_request.user.login)
