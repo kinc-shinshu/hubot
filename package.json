@@ -27,5 +27,8 @@
   },
   "devDependencies": {
     "coffeelint": "^2.1.0"
+  },
+  "scripts": {
+    "lint": "coffeelint ./scripts"
   }
 }
