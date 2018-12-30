@@ -30,7 +30,7 @@ module.exports = (robot) ->
     # check already assigned?
     pull_request = data.pull_request
     if pull_request.requested_reviewers.length == 0
-      robot.messageRoom channel_name, "<#{pull_request.url}|*\##{pull_request.number} #{pull_request.title}*> にはすでにアサイン済みです。"
+      robot.messageRoom channel_name, "<#{pull_request.html_url}|*\##{pull_request.number} #{pull_request.title}*> にはすでにアサイン済みです。"
       return res.end()
 
     reviewer = chooseReviewer(pull_request.user.login)
@@ -44,6 +44,6 @@ module.exports = (robot) ->
         robot.messageRoom '#debug', "Auto assign error \##{pull_request.number}."
         return
 
-      body = "<#{pull_request.url}|*\##{pull_request.number} #{pull_request.title}*> のレビュワーは *#{reviewer}* になりました。"
+      body = "<#{pull_request.html_url}|*\##{pull_request.number} #{pull_request.title}*> のレビュワーは *#{reviewer}* になりました。"
       robot.messageRoom channel_name, body
       res.end()
