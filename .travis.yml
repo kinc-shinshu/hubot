@@ -6,7 +6,7 @@ node_js:
 before_script:
   - npm i
 
-scripts:
+script:
   - npm run lint
 
 deploy:
