@@ -29,7 +29,7 @@ module.exports = (robot) ->
 
     # check already assigned?
     pull_request = data.pull_request
-    if pull_request.requested_reviewers.length == 0
+    if pull_request.requested_reviewers.length > 0
       robot.messageRoom channel_name, "<#{pull_request.html_url}|*\##{pull_request.number} #{pull_request.title}*> にはすでにアサイン済みです。"
       return res.end()
 
