@@ -8,7 +8,7 @@ module.exports = (robot) ->
     github_api = 'https://api.github.com'
 
   # notify to slack's channel_name when PR merged
-  robot.router.post '/github/pull-review', (req, res) ->
+  robot.router.post '/github/pull-merged', (req, res) ->
     data = req.body
 
     if data.action not 'closed'
