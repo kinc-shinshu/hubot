@@ -11,7 +11,7 @@ module.exports = (robot) ->
   robot.router.post '/github/pull-merged', (req, res) ->
     data = req.body
 
-    if data.action not 'closed'
+    if data.action not in ['closed']
       return res.end()
 
     # get data from URL's query
