@@ -12,7 +12,7 @@ module.exports = (robot) ->
   chooseReviewer = (pull_request_author) ->
     users = []
     Github.get "#{github_api}/teams/#{TERM}/members", (res_members, error) ->
-      for member, _ in res_members
+      for member, _index in res_members
         users.push member.login
 
     candidates = users.filter((u) -> u != pull_request_author)
