@@ -10,10 +10,10 @@ module.exports = (robot) ->
 
   # choose reviewer without pull request's author
   chooseReviewer = (pull_request_author) ->
-    users = []
-    Github.get "#{github_api}/teams/#{TERM}/members", (res_members, error) ->
-      for member, _index in res_members
-        users.push member.login
+    users = ['arsley', 'bieshan', 'yoidea']
+    # Github.get "#{github_api}/teams/#{TERM}/members", (res_members, error) ->
+    #   for member, _index in res_members
+    #     users.push member.login
 
     candidates = users.filter((u) -> u != pull_request_author)
     index = Math.floor Math.random() * candidates.length
